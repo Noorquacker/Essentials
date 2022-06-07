@@ -14,6 +14,7 @@ dependencies {
 
     implementation 'org.spongepowered:configurate-yaml:4.1.2'
     implementation 'org.checkerframework:checker-qual:3.14.0'
+    api 'org.apache.commons:commons-lang3:3.12.0'
 
     // Providers
     api project(':providers:BaseProviders')
@@ -39,6 +40,7 @@ shadowJar {
         include (dependency('org.yaml:snakeyaml'))
         include (dependency('io.leangen.geantyref:geantyref'))
         include (dependency('org.checkerframework:checker-qual'))
+        include (dependency('org.apache.commons:commons-lang3'))
         include (project(':providers:BaseProviders'))
         include (project(':providers:PaperProvider'))
         include (project(':providers:NMSReflectionProvider'))
@@ -51,6 +53,7 @@ shadowJar {
     relocate 'org.yaml.snakeyaml', 'com.earth2me.essentials.libs.snakeyaml'
     relocate 'io.leangen.geantyref', 'com.earth2me.essentials.libs.geantyref'
     relocate 'org.checkerframework', 'com.earth2me.essentials.libs.checkerframework'
+    relocate 'org.apache.commons.lang3', 'com.earth2me.essentials.libs.commons.lang3'
 
     minimize {
         include(dependency('org.checkerframework:checker-qual'))

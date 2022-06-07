@@ -14,7 +14,7 @@ import net.essentialsx.discord.interactions.InteractionChannelImpl;
 import net.essentialsx.discord.interactions.InteractionMemberImpl;
 import net.essentialsx.discord.util.DiscordUtil;
 import net.essentialsx.discord.util.MessageUtil;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.bukkit.Bukkit;
 import org.jetbrains.annotations.NotNull;
 
