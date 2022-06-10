@@ -6,6 +6,7 @@ import com.earth2me.essentials.User;
 import net.essentialsx.api.v2.services.discord.InteractionCommandArgument;
 import net.essentialsx.api.v2.services.discord.InteractionCommandArgumentType;
 import net.essentialsx.api.v2.services.discord.InteractionEvent;
+import net.essentialsx.discord.util.MessageUtil;
 import net.essentialsx.discord.JDADiscordService;
 import net.essentialsx.discord.interactions.InteractionCommandImpl;
 
@@ -44,7 +45,7 @@ public class ListCommand extends InteractionCommandImpl {
 
         final StringBuilder stringBuilder = new StringBuilder();
         for (final String str : output) {
-            stringBuilder.append(str).append("\n");
+            stringBuilder.append(MessageUtil.sanitizeDiscordMarkdown(str)).append("\n");
         }
         event.reply(stringBuilder.substring(0, stringBuilder.length() - 2));
     }
